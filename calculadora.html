@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Calculadora</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="calculadora.css">
+	<head>
+		<title>Calculadora</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="calculadora.css">
+	</head>
 
-</head>
-<body>
-
-			<table height="530px" width="500px" class="tabela">
+	<body>
+		<table height="530px" width="500px" class="tabela">
 				<tr>
 					<td colspan="5">
-						<form name="form" id="form"><input type="display" name="display" placeholder="DIGITE AQUI!"
-						 class="resultado"></form>
+						<form name="form" id="form"><input type="display" name="display"
+						 placeholder="DIGITE AQUI!" class="resultado"></form>
 					</td>
 				</tr>
 
@@ -57,31 +56,28 @@
 					<td><input type="button" value="," class="button" onclick="insert(',')"> </td>
 					<td><input type="button" value="=" class="buttonIgual" onclick="equal()"> </td>
 				</tr>
-			</table>
-	
-
+		</table>
 		<script>
 
-		function insert(num){
-			document.form.display.value = document.form.display.value + num
-		}
-
-		function backspace(){
-			var display = document.form.display.value = display.substring(0, display.lenght - 1);
-		}
-
-		function clean(){
-			document.form.display.value = ' ';
-		}
-
-		function equal(){
-			var exp = document.form.display.value;
-			if(exp){
-				document.form.display.value = eval(exp)
+			function insert(num){
+				document.form.display.value = document.form.display.value + num
 			}
-		}
-		
-	 	</script> 
 
-</body>
+			function backspace(){
+				var display = document.form.display.value = display.substring(0, display.lenght - 1);
+			}
+
+			function clean(){
+				document.form.display.value = ' ';
+			}
+
+			function equal(){
+				var exp = document.form.display.value;
+				if(exp){
+					document.form.display.value = eval(exp)
+				}
+			}
+			
+		 </script> 
+	</body>
 </html>
